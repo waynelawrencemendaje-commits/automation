@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NETGUARD | Network Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet"
+          href="{{ url_for('style_css') }}">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-logo">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+            <div class="brand-info">
+                <h2>NETGUARD</h2>
+                <span>NETWORK INTELLIGENCE</span>
+            </div>
+        </div>
+
+        <div class="nav-section">
+            <p class="nav-heading">MAIN MENU</p>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-item active">
+                    <i class="fa-solid fa-grid-2"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <span>Network Devices</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-terminal"></i>
+                    <span>Command Center</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <span>Activity History</span>
+                </a>
+
+            </nav>
+        </div>
+
+        <div class="nav-section">
+            <p class="nav-heading">SYSTEM</p>
+
+            <nav class="navigation">
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+
+                <a href="#" class="nav-item">
+                    <i class="fa-solid fa-circle-info"></i>
+                    <span>Documentation</span>
+                </a>
+
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <div class="system-icon">
+                <i class="fa-solid fa-shield-check"></i>
+            </div>
+
+            <div>
+                <h4>System Operational</h4>
+                <p>Network management active</p>
+            </div>
+
+            <span class="status-dot"></span>
+
+        </div>
+
+        <div class="sidebar-footer">
+            NETGUARD v1.0.0
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="page-heading">
+                <span class="breadcrumb">WORKSPACE / OVERVIEW</span>
+
+                <h1>Network Dashboard</h1>
+
+                <p>Monitor and manage your network infrastructure.</p>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="connection-status">
+                    <span class="status-dot"></span>
+                    System Online
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <div class="profile-info">
+                        <strong>Administrator</strong>
+                        <span>Network Manager</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- OVERVIEW -->
+        <section class="overview-section">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Infrastructure Overview</h2>
+                    <p>Your configured network environment.</p>
+                </div>
+
+                <span class="section-tag">
+                    <i class="fa-solid fa-circle"></i>
+                    CONFIGURATION
+                </span>
+            </div>
+
+
+            <div class="stats-grid">
+
+                <!-- DEVICE -->
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-router"></i>
+                        </div>
+
+                        <span class="stat-label">TARGET DEVICE</span>
+                    </div>
+
+                    <h3>192.168.10.231</h3>
+
+                    <p>Configured router address</p>
+
+                    <div class="stat-footer">
+                        <i class="fa-solid fa-network-wired"></i>
+                        Network endpoint
+                    </div>
+
+                </div>
+
+
+                <!-- PORT -->
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-plug"></i>
+                        </div>
+
+                        <span class="stat-label">CONNECTION PORT</span>
+                    </div>
+
+                    <h3>32770</h3>
+
+                    <p>Configured connection port</p>
+
+                    <div class="stat-footer">
+                        <i class="fa-solid fa-link"></i>
+                        Communication endpoint
+                    </div>
+
+                </div>
+
+
+                <!-- TOOL -->
+                <div class="stat-card">
+
+                    <div class="stat-header">
+                        <div class="stat-icon purple">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+
+                        <span class="stat-label">MANAGEMENT TOOL</span>
+                    </div>
+
+                    <h3>Netmiko / Telnet</h3>
+
+                    <p>Router communication interface</p>
+
+                    <div class="stat-footer">
+                        <i class="fa-solid fa-terminal"></i>
+                        Management interface
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- DIAGNOSTIC CONTROL -->
+        <section class="content-panel">
+
+            <div class="panel-heading">
+
+                <div class="panel-title">
+                    <div class="panel-icon">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+
+                    <div>
+                        <h2>Diagnostic Control Center</h2>
+                        <p>Execute network diagnostic operations.</p>
+                    </div>
+                </div>
+
+                <span class="panel-badge">CONTROL PANEL</span>
+
+            </div>
+
+
+            <div class="diagnostic-content">
+
+                <div class="diagnostic-info">
+
+                    <div class="diagnostic-symbol">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+
+                    <div>
+                        <h3>Network Diagnostic Workflow</h3>
+
+                        <p>
+                            Establish a connection to your configured
+                            router and retrieve diagnostic information
+                            using your authorized network commands.
+                        </p>
+                    </div>
+
+                </div>
+
+
+                <form method="POST" class="diagnostic-form">
+
+                    <button type="submit" class="execute-btn">
+
+                        <i class="fa-solid fa-play"></i>
+
+                        RUN NETWORK DIAGNOSTICS
+
+                        <i class="fa-solid fa-arrow-right button-arrow"></i>
+
+                    </button>
+
+                </form>
+
+
+                {% if error %}
+
+                <div class="alert-error">
+
+                    <i class="fa-solid fa-circle-exclamation"></i>
+
+                    <div>
+                        <strong>System Error</strong>
+                        <p>{{ error }}</p>
+                    </div>
+
+                </div>
+
+                {% endif %}
+
+            </div>
+
+        </section>
+
+
+        <!-- COMMAND OUTPUT -->
+        <section class="content-panel output-panel">
+
+            <div class="panel-heading">
+
+                <div class="panel-title">
+
+                    <div class="panel-icon terminal-icon">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+
+                    <div>
+                        <h2>Command Results</h2>
+                        <p>Network diagnostic output and execution logs.</p>
+                    </div>
+
+                </div>
+
+                <span class="live-badge">
+                    <span class="status-dot"></span>
+                    CONSOLE
+                </span>
+
+            </div>
+
+
+            {% if results %}
+
+                {% for command, output in results.items() %}
+
+                <div class="terminal">
+
+                    <div class="terminal-header">
+
+                        <div class="terminal-title">
+
+                            <div class="terminal-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>{{ command }}</span>
+
+                        </div>
+
+                        <span class="terminal-label">COMMAND OUTPUT</span>
+
+                    </div>
+
+                    <pre>{{ output }}</pre>
+
+                </div>
+
+                {% endfor %}
+
+            {% else %}
+
+                <div class="terminal">
+
+                    <div class="terminal-header">
+
+                        <div class="terminal-title">
+
+                            <div class="terminal-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>NETGUARD CONSOLE</span>
+
+                        </div>
+
+                        <span class="terminal-label">READY</span>
+
+                    </div>
+
+
+                    <div class="empty-state">
+
+                        <div class="empty-icon">
+                            <i class="fa-solid fa-terminal"></i>
+                        </div>
+
+                        <h3>No Diagnostic Results</h3>
+
+                        <p>
+                            The diagnostic console is ready.<br>
+                            Execute a network diagnostic workflow
+                            to display command results here.
+                        </p>
+
+                        <div class="console-status">
+                            <span class="status-dot"></span>
+                            Awaiting execution
+                        </div>
+
+                    </div>
+
+                </div>
+
+            {% endif %}
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div>
+                <strong>NETGUARD</strong>
+                <span>Network Management System</span>
+            </div>
+
+            <p>© 2026 NETGUARD. All rights reserved.</p>
+
+            <span class="footer-status">
+                <i class="fa-solid fa-shield-halved"></i>
+                Secure Administration
+            </span>
+
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
